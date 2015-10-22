@@ -3,38 +3,44 @@
 <!DOCTYPE html>
 <html>
 
-<head> 
+	<head> 
 
-	<meta charset="utf-8">
-	<title> Mobile MArs Pag1 </title>
-	<link rel="stylesheet" href="css/reset.css">
-	<link rel="stylesheet" href="css/style.css">
-	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
+		<meta charset="utf-8">
+		<title> Mobile MArs - Report </title>
+		<link rel="stylesheet" href="css/reset.css">
+		<link rel="stylesheet" href="css/style.css">
+		<link rel="stylesheet" href="http://netdna.bootstrapcdn.com/bootstrap/3.0.3/css/bootstrap.min.css">
 
-</head>
+	</head>
 
-<body ng-app="project3" ng-controller="InstaCtrl"> 
+	<body ng-app="myApp"> 
 
-	<header> 
-		
-	</header>
+		<div class="report" ng-controller="reportCtrl"> 
 
-	
+			<header> 
+				<h1> Report Encounter </h1>
+				<h3> Saftey on Mars is your responsability </h3>
+			</header>
 
-	<div class="">
-	</div>
-	
-	<div class= "">
-	</div>
+			<form name="myReport"  class="my-report" ng-submit="submitReport()" novalidate>
+				<select ng-model="report.alienSelect" placeholder="Select alien type"required>
+						<option value="Select">Select alien type</option>
+						<option value="Lizard Man">Lizard Man</option>
+	      				<option value="Giant Slug">Giant Slug</option>
+	      				<option value="Rogue Android">Rogue Android</option>
+	      				<option value="Octospider">Octospider</option>
+	      				<option value="Spiderpus">Spiderpus</option>
+	      		</select>
+	      		<input ng-model="report.action" type="text" name="action" placeholder="Action taken" required>
+	      		<input ng-disabled= "myReports.$invalid" type="submit" id="submit" value="Submit Report" />
+	      	</form>
+		</div>
+{{report}}
 
-	<footer>
-	</footer> 
+	<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.5/angular.min.js"></script>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+	<script src="js/script.js"></script>
 
-
-<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.5/angular.min.js"></script>
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
-<script src="js/script.js"></script>
-
-</body>
+	</body>
 
 </html>

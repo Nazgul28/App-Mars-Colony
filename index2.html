@@ -3,38 +3,50 @@
 <!DOCTYPE html>
 <html>
 
-<head> 
+	<head> 
+		<meta charset="utf-8">
+		<title> Mobile MArs - Who are you? </title>
+		<link rel="stylesheet" href="css/style.css">
+		<link href='https://fonts.googleapis.com/css?family=Raleway' rel='stylesheet' type='text/css'>
+	</head>
 
-	<meta charset="utf-8">
-	<title> Mobile MArs Pag1 </title>
-	<link rel="stylesheet" href="css/reset.css">
-	<link rel="stylesheet" href="css/style.css">
-	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
+	<body ng-app="myApp"> 
 
-</head>
-
-<body ng-app="project3" ng-controller="InstaCtrl"> 
-
-	<header> 
-		
-	</header>
-
-	
-
-	<div class="">
-	</div>
-	
-	<div class= "">
-	</div>
-
-	<footer>
-	</footer> 
+		<div class="form" ng-controller="FormCtrl">
+			<header>
+				<h1> Who are you? </h1>
+			</header>
 
 
-<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.5/angular.min.js"></script>
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
-<script src="js/script.js"></script>
+			<form name="myForm" class="loginForm" ng-submit="enter($event)" ng-class="{'show-validation': showValidation}" novalidate>
 
-</body>
+				<input ng-model="person.name" ng-maxlength="140" type="text" name="Name" placeholder="Name" required minlength="3" class= "">
+					
+				<input ng-model="person.age" type="number" name="age" placeholder="Age" required class="">
+
+				<div class="custom-select">
+					<select name="ocupation" ng-model="person.ocupationSelect" placeholder="Select Ocupation" required >
+							<option value="" disabled="disabled" selected="selected">Select ocupation</option>
+							<option value="Janitor">Janitor</option>
+		      				<option value="Alien hunter">Alien hunter</option>
+		      				<option value="Dust Farmer">Dust Farmer</option>
+		      				<option value="Battery technician">Battery technician</option>
+		      				<option value="Yoga teacher">Yoga Teacher</option>
+		      		</select>
+		      	</div>
+
+		      	<fieldset>
+        			<button class="submit" style="color:white">Check In</button>
+        		</fieldset>
+	      		</form>
+		</div>
+
+
+
+	<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.5/angular.min.js"></script>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+	<script src="js/script.js"></script>
+
+	</body>
 
 </html>

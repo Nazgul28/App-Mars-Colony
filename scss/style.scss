@@ -1,213 +1,296 @@
 @import "reset";
-@import "fonts";
-@import "variables";
-@import "mixin";
+@import "customreset";
+// @import "fonts";
+// @import "variables";
+// @import "mixin";
 
 
-
-// body {
-
-//   font-size: $font-size;
-//   font-weight: lighter;
-//   font-family: $body-font-family;
-//   font-color: $font-color;
-//   margin: 0 auto;
-
-
-//   @include bp(tablet) {
+// * {
+// 	box-sizing:border-box;
 // }
 
-//    @include bp(desktop) {
+//Welcome page
+
+.Welcome{
+	display:flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	background-color:#ed4343 ;
+// width: 100vw;
+height: 100vh;
+}
+
+header{
+	display: block;	
+}
+
+header h1{
+	font-size: 28px;
+	font-weight: bold;
+	font-family: 'raleway',sans-serif;
+	color: white;
+	text-transform: uppercase;
+	text-align: center;
+}
+
+a{
+	padding-top: 100px;
+	padding-bottom: 100px;
+}
+
+
+
+
+.pulse {
+	width:100px;
+	height:100px;
+	border-radius:50%;
+	background:white;
+	border-image:white;
+	animation: border-pulse 5s infinite ease-in-out;
+
+	@keyframes border-pulse {
+		0%   { 
+			box-shadow:
+			0 0 0 1rem rgba(255, 255, 255, 0.1),
+			0 0 0 2rem rgba(255, 255, 255, 0.15),
+			0 0 0 3rem rgba(255, 255, 255, 0.2);
+		}
+		50%  {       
+
+			box-shadow:
+			0 0 0 1.25rem rgba(255, 255, 255, 0.1),
+			0 0 0 2.75rem rgba(255, 255, 255, 0.1),
+			0 0 0 4rem rgba(255, 255, 255, 0);
+
+		}
+		75%  {       
+
+			box-shadow:
+			0 0 0 1.50rem rgba(255, 255, 255, 0.1),
+			0 0 0 3rem rgba(255, 255, 255, 0),
+			0 0 0 5rem rgba(255, 255, 255, 0);
+
+		}
+		100% { 
+
+			box-shadow:
+			0 0 0 1.75rem rgba(255, 255, 255, 0),
+			0 0 0 3.75rem rgba(255, 255, 255, 0),
+			0 0 0 6rem rgba(255, 255, 255, 0);
+
+		}
+	}
+}
+
+footer{
+	display: block;
+	padding-top: 50px;
+}
+
+footer h2{
+	font-size: 20px;
+	font-family: 'Raleway',sans-serif;
+	font-weight: bold;
+	color: white;
+	text-align: center;
+	
+}
+
+
+//// Form
+
+
+.form{
+
+	display:flex;
+	flex-direction: column;
+	justify-content: space-around;
+// flex-wrap: nowrap;
+// align-items: center;
+background-color: black;
+width:100vw;
+height: 100vh;
+// box-sizing: border-box;
+}
+
+header{
+	display:block;
+	text-align: center;
+}
+
+h1{
+	font-size: 50px;
+	font-weight: bold;
+	font-family: 'Raleway',sans-serif;
+	color:white;
+	padding: 2rem 1rem;
+	box-sizing: border-box;
+}
+
+form{
+	flex:1;
+	line-height: 15vh;
+	padding-left: 40px;
+	padding-right: 40px;
+
+	input{
+		width: 90vw;
+		height: 10vh;
+		// padding: 10px;
+	}
+
+	.custom-select {
+		height:4rem;
+		background:white;
+
+		select {
+			font-size:1rem;
+			line-height:2rem;
+			padding-left:0.5rem;
+			font-family: 'Raleway';
+			color: red;
+		}
+
+	}
+
+}
+
+*::-webkit-input-placeholder{
+	color: #ed4343;
+}
+
+
+fieldset {
+	padding-top: 20px;
+}
+
+button{
+	
+	padding-bottom: 40px;
+	padding-top: 30px;
+}
+
+
+.submit {
+	background-color:#ed4343;
+	width: 90vw;
+	height: 10vh;
+	font-size: 18px;
+	text-align: center;
+}
+
+//font-color inside the form?
+// .ocupation select {
+// 	font-family: 'Raleway', sans-serif;
+// 	color: #ed4343;
 
 // }
+
+// form input.placeholder{
+// 	color: #ed4343;
 // }
 
+// verify validation - it's not working
+
+.show-validation{
+	transition: 0.5s linear all;
+}
+.show-validation{
+	input, select, textarea {
+		&.ng-invalid{
+			border-radius: 0;
+			animation: show-validation 0.5s infinite;
+		}
+	}
+}
+@keyframes show-validation {
+	0%   { 
+		box-shadow:
+		0 0 0 0.2rem rgba(237, 67, 67, 0.1),
+		0 0 0 0.4rem rgba(237, 67, 67, 0.1),
+		0 0 0 0.5rem rgba(237, 67, 67, 0.1);
+	}
+	50%  {       
+
+		box-shadow:
+		0 0 0 0.5rem rgba(237, 67, 67, 0.1),
+		0 0 0 0.7rem rgba(237, 67, 67, 0.1),
+		0 0 0 0.8rem rgba(237, 67, 67, 0.1);
+
+	}
+	75%  {       
+
+		box-shadow:
+		0 0 0 0.3rem rgba(237, 67, 67, 0.1),
+		0 0 0 0.5rem rgba(237, 67, 67, 0.1),
+		0 0 0 0.9rem rgba(237, 67, 67, 0.1);
+
+	}
+	100% { 
+
+		box-shadow:
+		0 0 0 0.6rem rgba(237, 67, 67, 0.1),
+		0 0 0 0.8rem rgba(237, 67, 67, 0.1),
+		0 0 0 1rem rgba(237, 67, 67, 0.1);
+
+	}
+}
+/////// - Encounters
 
 
-// // Header - logo //
+.encounters {
+	width:100vw;
+	height: 100vh;
 
-// .top {
-//     width: 150px;
-//     height: 40px;
-//     padding: 10px 0px 10px 0px;
-//     display: block;
-//     margin: 0 auto;
+	header{
+		width:100vw;
+		height:20vh;
+	}
 
-// @include bp(tablet) {
-//     width: 150px;
-//     height: 40px;
-//     padding: 10px 0px 10px 20px;
-//     display: inline-block;
-//     text-align: left;
-// }
-// }
-// // Instagram - search box //
-// .instagram{
-//   background-image: url('../images/pattern.png'); 
-//   display: flex;
-//   flex-direction: column;
-//   justify-content: center; 
-//   align-items: center;
-//   padding-top: 10px 0px 10px 0px;
-// }
+	h1{
+		color:black;
+		font-size: 30px;
+		font-weight: bold;
+		font-family: 'Raleway',sans-serif;
+		padding: 2rem 1rem;
+		box-sizing: border-box;
+		padding-top: 15px;
+		padding-bottom: 5px;
+	}
 
-// .instagram img{
-//   width: 150px;
-//   height: 70px;
-//   display: block;
-//   margin: 0 auto;
-//   padding: 10px 0px 25px 0px;
-// }
-
-// .instagram form{
-//   display: block;
-//   margin: 0 auto;
-//   padding-bottom: 10px;
-// }
-
-// .instagram input{
-//   height: 20px;
-//   width: 150px;
-//   padding: 0px 10px 0px 10px;
-// }
-
-// .instagram button{
-//   height: 24px;
-//   width: 28px;
-// }
-
-// // Results - images are going to be displayed here // 
+	h3{
+		color: black;
+		font-size: 20px;
+		font-weight: bold;
+		font-family: 'Raleway',sans-serif;
+		box-sizing: border-box;
+		padding:5px, 5px;
+	}
 
 
-// .results{
-//   display: flex;
-//   border: 2px solid $border-grid-color;
-//   margin: 2px;
-//   flex-direction: column;
-//   min-height: 100vh;
-// } 
+	.actions{
+		height: 60vh;
+		width: 100vw;
+		padding-left: 20px;
+	}
 
-// // mobile / tablet / desktop screens
-// .results li{
-//   display: flex;
-//   flex-direction: column;
-//   justify-content: space-between;
-//   border: 2px solid $border-around-images;
-//   margin: 5px;
+	.button{
+		display:block;
+		text-align: center;
+		padding-top: 15px;
+		padding-bottom: 50px;
+		background-color: black;
+	}
 
-// @include bp(tablet) {
-//   width: 30%;
-//   justify-content: center;
-//   margin: 7px;
-// }
-
-// @include bp(desktop) {
-//   width: 23%;
-//   justify-content: center;
-// }
-// }
+}
 
 
-// li img{
-//   max-width: 100%;
-// }
-
-// // img search-tag before running the search
-
-// .tag-list {
-//   @include bp (tablet) {
-//   display: flex;
-//   flex-wrap: wrap;
-// }
-// }
-
-// .imgsearch {
-// @include bp(tablet) {
-//   width: 100%;
-// }
-// }
-
-// .profile {
-//   display: flex;
-//   flex-direction: row;
-//   flex: 1;
-//   flex-wrap: wrap;
-//   padding-bottom: 10px;
-//   justify-content: space-between;
-//   padding: 10px 15px 10px 15px;
-
-// @include bp(tablet) {
-//   display: flex;
-//   flex-direction: row;
-//   flex: 1;
-//   flex-wrap: wrap;
-//   padding-bottom: 10px;
-//   justify-content: space-between;
-//   padding: 10px 5px 10px 5px;
-// }
-// }
-
-// //Profile section of the search
-// .usernameandicons{
-//   display: flex;
-//   flex-direction: column;
-//   justify-content: center;
-//   text-align: right;
-// }
-
-// h3{
-//   font-family: $username-font-family;
-//   font-weight: bold;
-//   font-size: 17px;
-// }
 
 
-// .profilepic {
-//   border-radius: 50%;
-//   width: 50px;
-//   height: 50px;
-// }
 
-// .icons{
-//   padding-top: 5px;
-//   p{ display: inline; }
-// }
 
-// // Load More button - style
-// .button{
-//   display: block;
-//   padding: 20px 0px 20px 0px;
-//   border-bottom: 1px solid $border-grid-color;
-// }
-
-// .button button{
-//   display: block;
-//   margin: 0 auto;
-//   background-color: $button-color;
-//   padding: 5px 30px 5px 30px;
-// }
-
-// // Footer - style
-
-// h4{
-//   font-size: 10px;
-//   color: $border-grid-color;
-// }
-// .copyright {
-//   display: block;
-//   text-align: center;
-//   padding-top: 10px;
-// }
-
-// // Loading Gif 'Wait' button
-
-// .wait{ 
-//   background-color: rgba (255, 255, 255, .8) 50% 50% no-repeat;
-//   width: 100%;
-//   height: 100%;
-//   display: none;
-//   text-align: center;
-// }
 
 
 
