@@ -4,6 +4,7 @@ var gulp = require('gulp');
 var browserSync = require('browser-sync').create();
 var sass = require('gulp-sass');
 var autoprefixer = require ('gulp-autoprefixer');
+var historyApiFallback = require ('connect-history-api-fallback');
 
 
 gulp.task('scss', function () {
@@ -18,14 +19,15 @@ gulp.task('scss', function () {
 gulp.task('browser-sync', function() {
     browserSync.init({
         server: {
-            baseDir: "./"
+            baseDir: "./",
+            middleware: [ historyApiFallback()]
         }
     });
 
 
 
 gulp.watch('./scss/**/*.scss', ['scss']);
-gulp.watch(["index.html", "css/*.css", "js/*.js"]).on('change', browserSync.reload);
+gulp.watch(["*.html", "css/*.css", "js/*.js"]).on('change', browserSync.reload);
 
 });
 
