@@ -1,50 +1,30 @@
 
 
-<!DOCTYPE html>
-<html>
 
-	<head> 
 
-		<meta charset="utf-8">
-		<title> Mobile MArs - Report </title>
-		<link rel="stylesheet" href="css/style.css">
-		<link href='https://fonts.googleapis.com/css?family=Raleway' rel='stylesheet' type='text/css'>
-
-	</head>
-
-	<body ng-app="myApp"> 
-
-		<div class="report" ng-controller="reportCtrl"> 
+		<div class="report"> 
 			<header> 
 				<h1> Report Encounter </h1>
 				<h3> Saftey on Mars is your responsability </h3>
 			</header>
 
 			<form name="myReport"  class="loginReport" ng-submit="enter($event)" ng-class="{'show-validation': showValidation}" novalidate>
-				<div class="alien-select">
-					<select name="alien" ng-model="report.alienSelect" placeholder="Select alien type"required>
-							<option value="" disabled="disabled" selected="selected">Select alien type</option>
-							<option value="Lizard Man">Lizard Man</option>
-		      				<option value="Giant Slug">Giant Slug</option>
-		      				<option value="Rogue Android">Rogue Android</option>
-		      				<option value="Octospider">Octospider</option>
-		      				<option value="Spiderpus">Spiderpus</option>
-		      		</select>
-		      	</div>
+				<fieldset>
+					<div class="custom-select">
+						<select name="alien" ng-model="report.alienSelect" placeholder="Select alien type"required>
+								<option value="" disabled="disabled" selected="selected">Select alien type</option>
+								<option value="Lizard Man">Lizard Man</option>
+			      				<option value="Giant Slug">Giant Slug</option>
+			      				<option value="Rogue Android">Rogue Android</option>
+			      				<option value="Octospider">Octospider</option>
+			      				<option value="Spiderpus">Spiderpus</option>
+			      		</select>
+			      	</div>
 
-	      		<input ng-model="report.action" type="text" name="action" placeholder="Action taken" required>
-
-		      	<fieldset>
+		      		<textarea ng-model="report.action" type="text" name="action" placeholder="Action taken" required></textarea>
+	      		</fieldset>
+		      	<fieldset id="report-button">
         			<button class="submit" style="color:white">Submit Report</button>
         		</fieldset>
 	      	</form>
 		</div>
-
-
-	<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.5/angular.min.js"></script>
-	<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
-	<script src="js/script.js"></script>
-
-	</body>
-
-</html>

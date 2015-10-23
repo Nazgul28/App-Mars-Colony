@@ -110,7 +110,11 @@ x:-o-prefocus, .custom-select::after {
 /* ------------------------------------  */
 /*  END OF UGLY BROWSER-SPECIFIC HACKS  */
 /* ------------------------------------  */
-.Welcome {
+html {
+  font-size: 18px;
+  font-family: 'raleway',sans-serif; }
+
+.welcome {
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
@@ -124,7 +128,8 @@ x:-o-prefocus, .custom-select::after {
       -ms-flex-align: center;
           align-items: center;
   background-color: #ed4343;
-  height: 100vh; }
+  height: 100vh;
+  width: 100%; }
 
 header {
   display: block; }
@@ -192,7 +197,7 @@ footer h2 {
       -ms-flex-pack: distribute;
           justify-content: space-around;
   background-color: black;
-  width: 100vw;
+  width: 100%;
   height: 100vh; }
 
 header {
@@ -200,26 +205,28 @@ header {
   text-align: center; }
 
 h1 {
-  font-size: 50px;
   font-weight: bold;
   font-family: 'Raleway',sans-serif;
   color: white;
-  padding: 2rem 1rem;
-  box-sizing: border-box; }
+  padding-bottom: 2rem;
+  padding-top: 2rem; }
 
 form {
   -webkit-flex: 1;
       -ms-flex: 1;
           flex: 1;
-  line-height: 15vh;
+  line-height: 18vh;
   padding-left: 40px;
   padding-right: 40px; }
   form input {
-    width: 90vw;
-    height: 10vh; }
+    width: 99%;
+    height: 4rem;
+    line-height: 5rem;
+    font-size: 1.2rem; }
   form .custom-select {
     height: 4rem;
-    background: white; }
+    background: white;
+    width: 100%; }
     form .custom-select select {
       font-size: 1rem;
       line-height: 2rem;
@@ -228,10 +235,12 @@ form {
       color: red; }
 
 *::-webkit-input-placeholder {
-  color: #ed4343; }
+  color: #ed4343;
+  font-size: 1rem;
+  font-family: 'Raleway',sans-serif; }
 
 fieldset {
-  padding-top: 20px; }
+  padding-top: 40px; }
 
 button {
   padding-bottom: 40px;
@@ -239,9 +248,10 @@ button {
 
 .submit {
   background-color: #ed4343;
-  width: 90vw;
-  height: 10vh;
+  width: 99%;
+  height: 4rem;
   font-size: 18px;
+  font-family: 'Raleway',sans-serif;
   text-align: center; }
 
 .show-validation {
@@ -273,7 +283,17 @@ button {
     box-shadow: 0 0 0 0.6rem rgba(237, 67, 67, 0.1), 0 0 0 0.8rem rgba(237, 67, 67, 0.1), 0 0 0 1rem rgba(237, 67, 67, 0.1); } }
 
 .encounters {
-  width: 100vw;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: column;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-justify-content: space-around;
+      -ms-flex-pack: distribute;
+          justify-content: space-around;
+  background-color: white;
+  width: 100%;
   height: 100vh; }
   .encounters header {
     width: 100vw;
@@ -295,12 +315,79 @@ button {
     box-sizing: border-box;
     padding: 5px, 5px; }
   .encounters .actions {
-    height: 60vh;
-    width: 100vw;
-    padding-left: 20px; }
+    -webkit-flex: 1;
+        -ms-flex: 1;
+            flex: 1;
+    padding-left: 20px;
+    overflow: scroll; }
   .encounters .button {
     display: block;
     text-align: center;
-    padding-top: 15px;
-    padding-bottom: 50px;
+    padding-top: 30px;
+    padding-bottom: 40px;
     background-color: black; }
+    .encounters .button input {
+      background-color: #ed4343;
+      width: 88%;
+      height: 3rem;
+      font-size: 18px;
+      font-family: 'Raleway',sans-serif;
+      text-align: center; }
+
+.report {
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: column;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  background-color: black;
+  height: 100vh; }
+  .report header h1 {
+    -webkit-flex: 1;
+        -ms-flex: 1;
+            flex: 1;
+    font-size: 30px;
+    font-weight: bold;
+    font-family: 'Raleway',sans-serif;
+    padding-bottom: 0.5rem;
+    padding-top: 1rem;
+    text-transform: none; }
+  .report header h3 {
+    color: white; }
+  .report fieldset {
+    -webkit-flex: 1;
+        -ms-flex: 1;
+            flex: 1;
+    padding-top: 20px; }
+  .report form {
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-flex-direction: column;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    width: 90%;
+    -webkit-flex: 4;
+        -ms-flex: 4;
+            flex: 4;
+    padding: 0 2rem; }
+  .report .custom-select {
+    display: block;
+    height: 2rem;
+    background: white;
+    line-height: 1rem;
+    width: 99%; }
+    .report .custom-select select {
+      font-size: 1rem;
+      line-height: 2rem;
+      padding-left: 0.5rem;
+      font-family: 'Raleway',sans-serif;
+      color: red; }
+  .report textarea {
+    width: 95%;
+    height: 9rem;
+    font-size: 1rem;
+    line-height: 1rem;
+    padding: 0.5rem;
+    margin-top: 1rem; }
