@@ -2,7 +2,7 @@
 @import "customreset";
 
 
-//Welcome page
+//WELCOME SCREEN - html1
 html {
 font-size: 18px;
 font-family: 'raleway',sans-serif;
@@ -17,14 +17,13 @@ font-family: 'raleway',sans-serif;
 	background-color:#ed4343 ;
 	height: 100vh;
 	width:100%;
-}
 
 header{
 	display: block;	
 }
 
 header h1{
-	font-size: 28px;
+	font-size: 35px;
 	font-weight: bold;
 	font-family: 'raleway',sans-serif;
 	color: white;
@@ -33,12 +32,9 @@ header h1{
 }
 
 a{
-	padding-top: 100px;
-	padding-bottom: 100px;
+	padding-top: 75px;
+	padding-bottom: 50px;
 }
-
-
-
 
 .pulse {
 	width:100px;
@@ -46,7 +42,7 @@ a{
 	border-radius:50%;
 	background:white;
 	border-image:white;
-	animation: border-pulse 5s infinite ease-in-out;
+	animation: border-pulse 1.5s infinite ease-in-out;
 
 	@keyframes border-pulse {
 		0%   { 
@@ -88,7 +84,7 @@ footer{
 }
 
 footer h2{
-	font-size: 20px;
+	font-size: 30px;
 	font-family: 'Raleway',sans-serif;
 	font-weight: bold;
 	color: white;
@@ -96,8 +92,8 @@ footer h2{
 	
 }
 
-
-//// Form
+}
+//// FORM SCREEN - html2
 
 
 .form{
@@ -108,8 +104,6 @@ footer h2{
 	background-color: black;
 	width:100%;
 	height: 100vh;
-// box-sizing: border-box;
-}
 
 header{
 	display:block;
@@ -117,6 +111,7 @@ header{
 }
 
 h1{
+	font-size: 35px;
 	font-weight: bold;
 	font-family: 'Raleway',sans-serif;
 	color:white;
@@ -153,7 +148,6 @@ form{
 
 	}
 
-}
 
 *::-webkit-input-placeholder{
 	color: #ed4343;
@@ -175,14 +169,15 @@ button{
 
 .submit {
 	background-color:#ed4343;
-	width: 99%;
+	width: 100%;
 	height: 4rem;
 	font-size: 18px;
 	font-family: 'Raleway',sans-serif;
 	text-align: center;
-
+	border-color: black;
 }
-
+}
+}
 
 // validation - Form and Report pages
 
@@ -229,7 +224,7 @@ button{
 
 	}
 }
-/////// - Encounters
+/////// - ENCOUNTERS SCREEN - html3
 
 
 .encounters {
@@ -255,6 +250,7 @@ button{
 		box-sizing: border-box;
 		padding-top: 15px;
 		padding-bottom: 5px;
+		text-align: center;
 	}
 
 	h3{
@@ -264,12 +260,11 @@ button{
 		font-family: 'Raleway',sans-serif;
 		box-sizing: border-box;
 		padding:5px, 5px;
+		text-align: center;
 	}
 
 
 	.actions{
-		// height: 60vh;
-		// width: 100vw;
 		flex:1;
 		padding-left: 20px;
 		overflow: scroll;
@@ -286,6 +281,7 @@ button{
 
 		input{
 			background-color:#ed4343;
+			border-color: black;
 			width: 88%;
 			height: 3rem;
 			font-size: 18px;
@@ -296,29 +292,29 @@ button{
 	}
 
 }
-
+// REPORT SCREEN - html4 
 
 .report{
 	display:flex;
 	flex-direction: column;
-	// justify-content: space-around;
 	background-color: black;
-	// width:100%;
 	height: 100vh;
 
 	header h1{
 		flex:1;
 		font-size: 30px;
+		color: white;
 		font-weight: bold;
 		font-family: 'Raleway',sans-serif;
 		padding-bottom: 0.5rem;
 		padding-top: 1rem;
 		text-transform: none;
+		text-align: center;
 	}
 
 	header h3{
 			color:white;
-			// padding-bottom: 2rem;
+			text-align: center;
 		}
 
 fieldset{
@@ -341,7 +337,7 @@ form{
 		height:2rem;
 		background:white;
 		line-height: 1rem;
-		width: 99%;
+		width: 100%;
 
 
 		select {
@@ -356,13 +352,39 @@ form{
 
 
 textarea {
-width: 95%;
+width: 100%;
 height: 9rem;
 font-size: 1rem;
 line-height: 1rem;
 padding: 0.5rem;
 margin-top:1rem;
+padding-left: 0px;
+padding-right: 0px;
 }
+
+*::-webkit-input-placeholder{
+	color: #ed4343;
+	font-size: 1rem;
+	font-family:'Raleway',sans-serif;
+}
+
+button{
+	
+	padding-bottom: 40px;
+	padding-top: 30px;
+}
+
+
+.submit {
+	background-color:#ed4343;
+	width: 100%;
+	height: 4rem;
+	font-size: 18px;
+	font-family: 'Raleway',sans-serif;
+	text-align: center;
+	border-color: black;
+}
+
 
 }
 

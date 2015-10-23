@@ -15,13 +15,13 @@
 				<input ng-model="person.age" type="number" name="age" placeholder="Age" required class="">
 
 				<div class="custom-select">
-					<select name="ocupation" ng-model="person.ocupationSelect" placeholder="Select Ocupation" required >
-							<option value="" disabled="disabled" selected="selected">Select ocupation</option>
-							<option value="Janitor">Janitor</option>
-		      				<option value="Alien hunter">Alien hunter</option>
+					<select name="occupation" ng-model="person.occupation" ng-class="{placeholder:!person.occupation}"required >
+							<option value="" class="placeholder"> Select occupation</option>
+							<option value="{{ occupation}}" ng-repeat="occupation in occupations"> {{ occupation }}</option>
+		      				<!-- <option value="Alien hunter">Alien hunter</option>
 		      				<option value="Dust Farmer">Dust Farmer</option>
 		      				<option value="Battery technician">Battery technician</option>
-		      				<option value="Yoga teacher">Yoga Teacher</option>
+		      				<option value="Yoga teacher">Yoga Teacher</option> -->
 		      		</select>
 		      	</div>
 

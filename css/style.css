@@ -130,30 +130,26 @@ html {
   background-color: #ed4343;
   height: 100vh;
   width: 100%; }
-
-header {
-  display: block; }
-
-header h1 {
-  font-size: 28px;
-  font-weight: bold;
-  font-family: 'raleway',sans-serif;
-  color: white;
-  text-transform: uppercase;
-  text-align: center; }
-
-a {
-  padding-top: 100px;
-  padding-bottom: 100px; }
-
-.pulse {
-  width: 100px;
-  height: 100px;
-  border-radius: 50%;
-  background: white;
-  border-image: white;
-  -webkit-animation: border-pulse 5s infinite ease-in-out;
-          animation: border-pulse 5s infinite ease-in-out; }
+  .welcome header {
+    display: block; }
+  .welcome header h1 {
+    font-size: 35px;
+    font-weight: bold;
+    font-family: 'raleway',sans-serif;
+    color: white;
+    text-transform: uppercase;
+    text-align: center; }
+  .welcome a {
+    padding-top: 75px;
+    padding-bottom: 50px; }
+  .welcome .pulse {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    background: white;
+    border-image: white;
+    -webkit-animation: border-pulse 1.5s infinite ease-in-out;
+            animation: border-pulse 1.5s infinite ease-in-out; }
 
 @-webkit-keyframes border-pulse {
   0% {
@@ -174,17 +170,15 @@ a {
     box-shadow: 0 0 0 1.5rem rgba(255, 255, 255, 0.1), 0 0 0 3rem rgba(255, 255, 255, 0), 0 0 0 5rem rgba(255, 255, 255, 0); }
   100% {
     box-shadow: 0 0 0 1.75rem rgba(255, 255, 255, 0), 0 0 0 3.75rem rgba(255, 255, 255, 0), 0 0 0 6rem rgba(255, 255, 255, 0); } }
-
-footer {
-  display: block;
-  padding-top: 50px; }
-
-footer h2 {
-  font-size: 20px;
-  font-family: 'Raleway',sans-serif;
-  font-weight: bold;
-  color: white;
-  text-align: center; }
+  .welcome footer {
+    display: block;
+    padding-top: 50px; }
+  .welcome footer h2 {
+    font-size: 30px;
+    font-family: 'Raleway',sans-serif;
+    font-weight: bold;
+    color: white;
+    text-align: center; }
 
 .form {
   display: -webkit-flex;
@@ -199,60 +193,55 @@ footer h2 {
   background-color: black;
   width: 100%;
   height: 100vh; }
-
-header {
-  display: block;
-  text-align: center; }
-
-h1 {
-  font-weight: bold;
-  font-family: 'Raleway',sans-serif;
-  color: white;
-  padding-bottom: 2rem;
-  padding-top: 2rem; }
-
-form {
-  -webkit-flex: 1;
-      -ms-flex: 1;
-          flex: 1;
-  line-height: 18vh;
-  padding-left: 40px;
-  padding-right: 40px; }
-  form input {
-    width: 99%;
-    height: 4rem;
-    line-height: 5rem;
-    font-size: 1.2rem; }
-  form .custom-select {
-    height: 4rem;
-    background: white;
-    width: 100%; }
-    form .custom-select select {
+  .form header {
+    display: block;
+    text-align: center; }
+  .form h1 {
+    font-size: 35px;
+    font-weight: bold;
+    font-family: 'Raleway',sans-serif;
+    color: white;
+    padding-bottom: 2rem;
+    padding-top: 2rem; }
+  .form form {
+    -webkit-flex: 1;
+        -ms-flex: 1;
+            flex: 1;
+    line-height: 18vh;
+    padding-left: 40px;
+    padding-right: 40px; }
+    .form form input {
+      width: 99%;
+      height: 4rem;
+      line-height: 5rem;
+      font-size: 1.2rem; }
+    .form form .custom-select {
+      height: 4rem;
+      background: white;
+      width: 100%; }
+      .form form .custom-select select {
+        font-size: 1rem;
+        line-height: 2rem;
+        padding-left: 0.5rem;
+        font-family: 'Raleway';
+        color: red; }
+    .form form *::-webkit-input-placeholder {
+      color: #ed4343;
       font-size: 1rem;
-      line-height: 2rem;
-      padding-left: 0.5rem;
-      font-family: 'Raleway';
-      color: red; }
-
-*::-webkit-input-placeholder {
-  color: #ed4343;
-  font-size: 1rem;
-  font-family: 'Raleway',sans-serif; }
-
-fieldset {
-  padding-top: 40px; }
-
-button {
-  padding-bottom: 40px;
-  padding-top: 30px; }
-
-.submit {
-  background-color: #ed4343;
-  width: 99%;
-  height: 4rem;
-  font-size: 18px;
-  font-family: 'Raleway',sans-serif;
-  text-align: center; }
+      font-family: 'Raleway',sans-serif; }
+    .form form fieldset {
+      padding-top: 40px; }
+    .form form button {
+      padding-bottom: 40px;
+      padding-top: 30px; }
+    .form form .submit {
+      background-color: #ed4343;
+      width: 100%;
+      height: 4rem;
+      font-size: 18px;
+      font-family: 'Raleway',sans-serif;
+      text-align: center;
+      border-color: black; }
 
 .show-validation {
   transition: 0.5s linear all; }
@@ -306,14 +295,16 @@ button {
     padding: 2rem 1rem;
     box-sizing: border-box;
     padding-top: 15px;
-    padding-bottom: 5px; }
+    padding-bottom: 5px;
+    text-align: center; }
   .encounters h3 {
     color: black;
     font-size: 20px;
     font-weight: bold;
     font-family: 'Raleway',sans-serif;
     box-sizing: border-box;
-    padding: 5px, 5px; }
+    padding: 5px, 5px;
+    text-align: center; }
   .encounters .actions {
     -webkit-flex: 1;
         -ms-flex: 1;
@@ -328,6 +319,7 @@ button {
     background-color: black; }
     .encounters .button input {
       background-color: #ed4343;
+      border-color: black;
       width: 88%;
       height: 3rem;
       font-size: 18px;
@@ -348,13 +340,16 @@ button {
         -ms-flex: 1;
             flex: 1;
     font-size: 30px;
+    color: white;
     font-weight: bold;
     font-family: 'Raleway',sans-serif;
     padding-bottom: 0.5rem;
     padding-top: 1rem;
-    text-transform: none; }
+    text-transform: none;
+    text-align: center; }
   .report header h3 {
-    color: white; }
+    color: white;
+    text-align: center; }
   .report fieldset {
     -webkit-flex: 1;
         -ms-flex: 1;
@@ -377,7 +372,7 @@ button {
     height: 2rem;
     background: white;
     line-height: 1rem;
-    width: 99%; }
+    width: 100%; }
     .report .custom-select select {
       font-size: 1rem;
       line-height: 2rem;
@@ -385,9 +380,26 @@ button {
       font-family: 'Raleway',sans-serif;
       color: red; }
   .report textarea {
-    width: 95%;
+    width: 100%;
     height: 9rem;
     font-size: 1rem;
     line-height: 1rem;
     padding: 0.5rem;
-    margin-top: 1rem; }
+    margin-top: 1rem;
+    padding-left: 0px;
+    padding-right: 0px; }
+  .report *::-webkit-input-placeholder {
+    color: #ed4343;
+    font-size: 1rem;
+    font-family: 'Raleway',sans-serif; }
+  .report button {
+    padding-bottom: 40px;
+    padding-top: 30px; }
+  .report .submit {
+    background-color: #ed4343;
+    width: 100%;
+    height: 4rem;
+    font-size: 18px;
+    font-family: 'Raleway',sans-serif;
+    text-align: center;
+    border-color: black; }

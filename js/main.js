@@ -1,4 +1,4 @@
-var app = angular.module("myApp", ['ui.router']);
+var app = angular.module("myApp", ['ui.router', 'ngAnimate']);
 
 	app.config(['$stateProvider',
 				'$urlRouterProvider',
@@ -46,19 +46,28 @@ var app = angular.module("myApp", ['ui.router']);
 //  })
 
 // My Controlers
-// home page controller
+// home page controller - welcome screen
 app.controller('welcomeCtrl', ['$scope', function($scope){
 
 
 }])
 
 
-// form controller
+// form controller 
 app.controller('FormCtrl', ['$scope','$state', function($scope, $state){
 
 
 	$scope.person={};
 	$scope.showValidation = false;
+
+	$scope.occupations= ['Janitor',
+        			'Alien hunter',
+        			'Dust farmer',
+        			'Battery technician',
+        			'Yoga teacher'
+    ];
+
+
 
 	$scope.enter = function(e){
 		e.preventDefault();
