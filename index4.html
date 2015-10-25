@@ -11,9 +11,9 @@
 			<form name="myReport"  class="loginReport" ng-submit="enter($event)" ng-class="{'show-validation': showValidation}" novalidate>
 				<fieldset>
 					<div class="custom-select">
-						<select name="alien" ng-model="report.alien" ng-class="{placeholder: !report.alien}"required>
+						<select name="alien" ng-model="alien.type" ng-class="{placeholder: !alien.type}"required>
 								<option value="" class="placeholder">Select alien type</option>
-								<option value="{{alien}}" ng-repeat="alien in aliens "> {{alien}} </option>
+								<option value="{{alien.type}}" ng-repeat="alien in aliens "> {{alien.type}} </option>
 			      		</select>
 			      	</div>
 

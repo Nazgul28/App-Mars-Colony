@@ -148,8 +148,8 @@ html {
     border-radius: 50%;
     background: white;
     border-image: white;
-    -webkit-animation: border-pulse 1.5s infinite ease-in-out;
-            animation: border-pulse 1.5s infinite ease-in-out; }
+    -webkit-animation: border-pulse 1.25s infinite ease-in-out;
+            animation: border-pulse 1.25s infinite ease-in-out; }
 
 @-webkit-keyframes border-pulse {
   0% {
@@ -311,6 +311,8 @@ html {
             flex: 1;
     padding-left: 20px;
     overflow: scroll; }
+  .encounters #alienaction {
+    padding-bottom: 30px; }
   .encounters .button {
     display: block;
     text-align: center;

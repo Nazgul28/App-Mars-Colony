@@ -42,7 +42,7 @@ a{
 	border-radius:50%;
 	background:white;
 	border-image:white;
-	animation: border-pulse 1.5s infinite ease-in-out;
+	animation: border-pulse 1.25s infinite ease-in-out;
 
 	@keyframes border-pulse {
 		0%   { 
@@ -270,7 +270,9 @@ button{
 		overflow: scroll;
 	}
 
-
+	#alienaction{
+	padding-bottom: 30px;
+	} 
 
 	.button{
 		display:block;

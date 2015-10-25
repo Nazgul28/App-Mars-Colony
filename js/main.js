@@ -38,7 +38,8 @@ var app = angular.module("myApp", ['ui.router', 'ngAnimate', 'ngCookies']);
 							
 						.state ('encounters',{
 							url: '/encounters',
-							templateUrl: 'index3.html'
+							templateUrl: 'index3.html',
+							controller: 'marsCtrl'
 
 						})
 						
@@ -119,23 +120,41 @@ var API_URL_CREATE_COLONIST = "https://red-wdp-api.herokuapp.com/api/mars/coloni
 
 //encounter controller
 
-app.controller('encountersCtrl', ['$scope', function($scope){
+app.controller('marsCtrl', ['$scope', '$http', function($scope, $http){
+	var ENCOUNTERS_API_URL = 'https://red-wdp-api.herokuapp.com/api/mars/encounters';
 
+	$scope.encounter={};
+
+	$http.get(ENCOUNTERS_API_URL).then(function(response){
+	
+	// debugger;
+	$scope.encounters = response.data.encounters;
+
+	});
 
 }])
 
 // report controller
 
-app.controller('reportCtrl', ['$scope', function($scope){
-
-	$scope.report={};
+app.controller('reportCtrl', ['$scope','$http', function($scope, $http){
+var ALIEN_TYPE_API_URL = "https://red-wdp-api.herokuapp.com/api/mars/aliens";
+	
+	$scope.alien ={};
 	$scope.showValidation = false;
-	$scope.aliens= ['Lizard Man',
-					'Giant Slug',
-					'Rogue Android',
-					'Octospider',
-					'Spiderpus'
-	];
+	// $scope.aliens= ['Lizard Man',
+	// 				'Giant Slug',
+	// 				'Rogue Android',
+	// 				'Octospider',
+	// 				'Spiderpus'
+	// ];
+
+	$http.get(ALIEN_TYPE_API_URL).then(function(response){
+	// debugger;
+
+	$scope.aliens = response.data.aliens;
+
+
+	});
 
 	$scope.enter = function (e){
 		e.preventDefault();
