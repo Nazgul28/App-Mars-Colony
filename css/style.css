@@ -112,7 +112,7 @@ x:-o-prefocus, .custom-select::after {
 /* ------------------------------------  */
 html {
   font-size: 18px;
-  font-family: 'raleway',sans-serif; }
+  font-family: "raleway", sans-serif; }
 
 .welcome {
   display: -webkit-flex;
@@ -135,7 +135,7 @@ html {
   .welcome header h1 {
     font-size: 35px;
     font-weight: bold;
-    font-family: 'raleway',sans-serif;
+    font-family: "raleway", sans-serif;
     color: white;
     text-transform: uppercase;
     text-align: center; }
@@ -175,7 +175,7 @@ html {
     padding-top: 50px; }
   .welcome footer h2 {
     font-size: 30px;
-    font-family: 'Raleway',sans-serif;
+    font-family: "raleway", sans-serif;
     font-weight: bold;
     color: white;
     text-align: center; }
@@ -199,7 +199,7 @@ html {
   .form h1 {
     font-size: 35px;
     font-weight: bold;
-    font-family: 'Raleway',sans-serif;
+    font-family: "raleway", sans-serif;
     color: white;
     padding-bottom: 2rem;
     padding-top: 2rem; }
@@ -223,12 +223,12 @@ html {
         font-size: 1rem;
         line-height: 2rem;
         padding-left: 0.5rem;
-        font-family: 'Raleway';
+        font-family: "raleway", sans-serif;
         color: red; }
     .form form *::-webkit-input-placeholder {
       color: #ed4343;
       font-size: 1rem;
-      font-family: 'Raleway',sans-serif; }
+      font-family: "raleway", sans-serif; }
     .form form fieldset {
       padding-top: 40px; }
     .form form button {
@@ -239,7 +239,7 @@ html {
       width: 100%;
       height: 4rem;
       font-size: 18px;
-      font-family: 'Raleway',sans-serif;
+      font-family: "raleway", sans-serif;
       text-align: center;
       border-color: black; }
 
@@ -291,7 +291,7 @@ html {
     color: black;
     font-size: 30px;
     font-weight: bold;
-    font-family: 'Raleway',sans-serif;
+    font-family: "raleway", sans-serif;
     padding: 2rem 1rem;
     box-sizing: border-box;
     padding-top: 15px;
@@ -301,7 +301,7 @@ html {
     color: black;
     font-size: 20px;
     font-weight: bold;
-    font-family: 'Raleway',sans-serif;
+    font-family: "raleway", sans-serif;
     box-sizing: border-box;
     padding: 5px, 5px;
     text-align: center; }
@@ -325,7 +325,7 @@ html {
       width: 88%;
       height: 3rem;
       font-size: 18px;
-      font-family: 'Raleway',sans-serif;
+      font-family: "raleway", sans-serif;
       text-align: center; }
 
 .report {
@@ -344,7 +344,7 @@ html {
     font-size: 30px;
     color: white;
     font-weight: bold;
-    font-family: 'Raleway',sans-serif;
+    font-family: "raleway", sans-serif;
     padding-bottom: 0.5rem;
     padding-top: 1rem;
     text-transform: none;
@@ -379,7 +379,7 @@ html {
       font-size: 1rem;
       line-height: 2rem;
       padding-left: 0.5rem;
-      font-family: 'Raleway',sans-serif;
+      font-family: "raleway", sans-serif;
       color: red; }
   .report textarea {
     width: 100%;
@@ -393,7 +393,7 @@ html {
   .report *::-webkit-input-placeholder {
     color: #ed4343;
     font-size: 1rem;
-    font-family: 'Raleway',sans-serif; }
+    font-family: "raleway", sans-serif; }
   .report button {
     padding-bottom: 40px;
     padding-top: 30px; }
@@ -402,6 +402,89 @@ html {
     width: 100%;
     height: 4rem;
     font-size: 18px;
-    font-family: 'Raleway',sans-serif;
+    font-family: "raleway", sans-serif;
     text-align: center;
     border-color: black; }
+
+.page {
+  position: absolute;
+  width: 100%;
+  top: 0;
+  bottom: 0; }
+
+[ui-view].ng-enter, [ui-view].ng-leave {
+  position: absolute;
+  left: 0;
+  right: 0;
+  transition: all 0.5s ease-in-out; }
+
+.welcome [ui-view].ng-enter {
+  opacity: 0; }
+
+.register [ui-view].ng-enter {
+  opacity: 0;
+  -webkit-transform: translate3d(0, -2000px, 0);
+  transform: translate3d(0, -2000px, 0); }
+
+.encounters [ui-view].ng-enter {
+  -webkit-transform: translate3d(200px, 0, 0);
+  transform: translate3d(200px, 0, 0); }
+
+.report [ui-view].ng-enter {
+  opacity: 0;
+  -webkit-transform: translate3d(-200px, 0, 0);
+  transform: translate3d(-200px, 0, 0); }
+
+.welcome [ui-view].ng-enter-active {
+  opacity: 1; }
+
+.register [ui-view].ng-enter-active {
+  opacity: 1;
+  -webkit-transform: translate3d(0, 0, 0);
+  transform: translate3d(0, 0, 0); }
+
+.encounters [ui-view].ng-enter-active {
+  -opacity: 1;
+  -webkit-transform: translate3d(0, 0, 0);
+  transform: translate3d(0, 0, 0); }
+
+.report [ui-view].ng-enter-active {
+  opacity: 1;
+  -webkit-transform: translate3d(0, 0, 0);
+  transform: translate3d(0, 0, 0); }
+
+.welcome [ui-view].ng-leave {
+  opacity: 1; }
+
+.register [ui-view].ng-leave {
+  opacity: 1;
+  -webkit-transform: scale3d(1, 1, 1);
+  transform: scale3d(1, 1, 1); }
+
+.encounters [ui-view].ng-leave {
+  opacity: 1;
+  -webkit-transform: translate3d(0, 0, 0);
+  transform: translate3d(0, 0, 0); }
+
+.report [ui-view].ng-leave {
+  opacity: 1;
+  -webkit-transform: translate3d(0, 0, 0);
+  transform: translate3d(0, 0, 0); }
+
+.welcome [ui-view].ng-leave-active {
+  opacity: 0; }
+
+.register [ui-view].ng-leave-active {
+  opacity: 0;
+  -webkit-transform: scale3d(0, 0, 0);
+  transform: scale3d(0, 0, 0); }
+
+.encounters [ui-view].ng-leave-active {
+  opacity: 0;
+  -webkit-transform: translate3d(-200px, 0, 0);
+  transform: translate3d(-200px, 0, 0); }
+
+.report [ui-view].ng-leave-active {
+  opacity: 0;
+  -webkit-transform: translate3d(200px, 0, 0);
+  transform: translate3d(200px, 0, 0); }

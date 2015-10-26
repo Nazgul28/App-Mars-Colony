@@ -9,33 +9,13 @@
 			</header>
 
 			<div class="actions">
-				
 				<p ng-repeat-start = "encounter in encounters"> {{encounter.date}} - {{encounter.atype}} </p> 
 				<p id="alienaction" ng-repeat-end ="encounter.action"> {{encounter.action}}</p>
-				
-			<!-- ng-model="encounter.encounters"> -->
-				 <!-- <p>{{ encounter.date}} </p> -->
-				<!-- montar estrutura chamando encounter.date .. + encounter.name... 
-				<!<p> Tuesday, Oct 20 - Lizard </p>
-				<p> Smoked it </p></br>
-				<p> Tuesday, Oct 20 - Lizard </p>
-				<p> Smoked it </p></br>
-				<p> Tuesday, Oct 20 - Lizard </p>
-				<p> Smoked it </p></br>
-				<p> Tuesday, Oct 20 - Lizard </p>
-				<p> Smoked it </p></br>
-				<p> Tuesday, Oct 20 - Lizard </p>
-				<p> Smoked it </p></br>
-				<p> Tuesday, Oct 20 - Lizard </p>
-				<p> Smoked it </p></br> -->
 			</div>
-
-			
 			<div class = "button">
 				<a ui-sref="report">
 				<input type="submit" id="submit" value="Report Encounter" style="color:white" />
 				</a>
 			</div>
-			
 		</div>
 

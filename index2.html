@@ -6,8 +6,7 @@
 			<header>
 				<h1> Who are you? </h1>
 			</header>
-
-
+			
 			<form name="myForm" class="loginForm" ng-submit="enter($event)" ng-class="{'show-validation': showValidation}" novalidate>
 
 				<input ng-model="colonist.name" ng-maxlength="140" type="text" name="Name" placeholder="Name" required minlength="3" class= "">
@@ -16,8 +15,8 @@
 
 				<div class="custom-select">
 					<select name="occupation" ng-model="colonist.job_id" ng-class="{placeholder:!colonist.job_id}"required >
-							<option value="" class="placeholder"> Select occupation</option>
-							<option value="{{ job.id }}" ng-repeat="job in jobs"> {{ job.name }}</option>
+						<option value="" class="placeholder"> Select occupation</option>
+						<option value="{{ job.id }}" ng-repeat="job in jobs"> {{ job.name }}</option>
 		      		</select>
 		      	</div>
 

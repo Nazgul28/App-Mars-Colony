@@ -1,11 +1,12 @@
 @import "reset";
 @import "customreset";
+@import "variables";
 
 
 //WELCOME SCREEN - html1
 html {
 font-size: 18px;
-font-family: 'raleway',sans-serif;
+font-family: $raleway;
 
 }
 
@@ -18,79 +19,78 @@ font-family: 'raleway',sans-serif;
 	height: 100vh;
 	width:100%;
 
-header{
-	display: block;	
-}
+	header{
+		display: block;	
+	}
 
-header h1{
-	font-size: 35px;
-	font-weight: bold;
-	font-family: 'raleway',sans-serif;
-	color: white;
-	text-transform: uppercase;
-	text-align: center;
-}
+	header h1{
+		font-size: 35px;
+		font-weight: bold;
+		font-family: $raleway;
+		color: white;
+		text-transform: uppercase;
+		text-align: center;
+	}
 
-a{
-	padding-top: 75px;
-	padding-bottom: 50px;
-}
+	a{
+		padding-top: 75px;
+		padding-bottom: 50px;
+	}
+// Pulse animation
+	.pulse {
+		width:100px;
+		height:100px;
+		border-radius:50%;
+		background:white;
+		border-image:white;
+		animation: border-pulse 1.25s infinite ease-in-out;
 
-.pulse {
-	width:100px;
-	height:100px;
-	border-radius:50%;
-	background:white;
-	border-image:white;
-	animation: border-pulse 1.25s infinite ease-in-out;
+		@keyframes border-pulse {
+			0%   { 
+				box-shadow:
+				0 0 0 1rem rgba(255, 255, 255, 0.1),
+				0 0 0 2rem rgba(255, 255, 255, 0.15),
+				0 0 0 3rem rgba(255, 255, 255, 0.2);
+			}
+			50%  {       
 
-	@keyframes border-pulse {
-		0%   { 
-			box-shadow:
-			0 0 0 1rem rgba(255, 255, 255, 0.1),
-			0 0 0 2rem rgba(255, 255, 255, 0.15),
-			0 0 0 3rem rgba(255, 255, 255, 0.2);
-		}
-		50%  {       
+				box-shadow:
+				0 0 0 1.25rem rgba(255, 255, 255, 0.1),
+				0 0 0 2.75rem rgba(255, 255, 255, 0.1),
+				0 0 0 4rem rgba(255, 255, 255, 0);
 
-			box-shadow:
-			0 0 0 1.25rem rgba(255, 255, 255, 0.1),
-			0 0 0 2.75rem rgba(255, 255, 255, 0.1),
-			0 0 0 4rem rgba(255, 255, 255, 0);
+			}
+			75%  {       
 
-		}
-		75%  {       
+				box-shadow:
+				0 0 0 1.50rem rgba(255, 255, 255, 0.1),
+				0 0 0 3rem rgba(255, 255, 255, 0),
+				0 0 0 5rem rgba(255, 255, 255, 0);
 
-			box-shadow:
-			0 0 0 1.50rem rgba(255, 255, 255, 0.1),
-			0 0 0 3rem rgba(255, 255, 255, 0),
-			0 0 0 5rem rgba(255, 255, 255, 0);
+			}
+			100% { 
 
-		}
-		100% { 
+				box-shadow:
+				0 0 0 1.75rem rgba(255, 255, 255, 0),
+				0 0 0 3.75rem rgba(255, 255, 255, 0),
+				0 0 0 6rem rgba(255, 255, 255, 0);
 
-			box-shadow:
-			0 0 0 1.75rem rgba(255, 255, 255, 0),
-			0 0 0 3.75rem rgba(255, 255, 255, 0),
-			0 0 0 6rem rgba(255, 255, 255, 0);
-
+			}
 		}
 	}
-}
 
-footer{
-	display: block;
-	padding-top: 50px;
-}
+	footer{
+		display: block;
+		padding-top: 50px;
+	}
 
-footer h2{
-	font-size: 30px;
-	font-family: 'Raleway',sans-serif;
-	font-weight: bold;
-	color: white;
-	text-align: center;
-	
-}
+	footer h2{
+		font-size: 30px;
+		font-family: $raleway;
+		font-weight: bold;
+		color: white;
+		text-align: center;
+	}
 
 }
 //// FORM SCREEN - html2
@@ -105,84 +105,83 @@ footer h2{
 	width:100%;
 	height: 100vh;
 
-header{
-	display:block;
-	text-align: center;
-}
-
-h1{
-	font-size: 35px;
-	font-weight: bold;
-	font-family: 'Raleway',sans-serif;
-	color:white;
-	padding-bottom: 2rem;
-	padding-top: 2rem;
-}
-
-form{
-	flex:1;
-	line-height: 18vh;
-	padding-left: 40px;
-	padding-right: 40px;
-
-
-	input{
-		width: 99%;
-		height: 4rem;
-		line-height: 5rem;
-		font-size: 1.2rem;
+	header{
+			display:block;
+			text-align: center;
 	}
 
-	.custom-select {
-		height:4rem;
-		background:white;
-		width: 100%;
+	h1{
+		font-size: 35px;
+		font-weight: bold;
+		font-family: $raleway;
+		color:white;
+		padding-bottom: 2rem;
+		padding-top: 2rem;
+	}
 
-		select {
-			font-size:1rem;
-			line-height:2rem;
-			padding-left:0.5rem;
-			font-family: 'Raleway';
-			color: red;
+	form{
+			flex:1;
+			line-height: 18vh;
+			padding-left: 40px;
+			padding-right: 40px;
+
+
+		input{
+				width: 99%;
+				height: 4rem;
+				line-height: 5rem;
+				font-size: 1.2rem;
 		}
 
+		.custom-select {
+				height:4rem;
+				background:white;
+				width: 100%;
+
+			select {
+					font-size:1rem;
+					line-height:2rem;
+					padding-left:0.5rem;
+					font-family: $raleway;
+					color: red;
+			}
+
 	}
 
 
-*::-webkit-input-placeholder{
-	color: #ed4343;
-	font-size: 1rem;
-	font-family:'Raleway',sans-serif;
-}
+		*::-webkit-input-placeholder{
+								color: #ed4343;
+								font-size: 1rem;
+								font-family:$raleway;
+		}
 
 
-fieldset {
-	padding-top: 40px;
-}
+	fieldset {
+			padding-top: 40px;
+	}
 
-button{
-	
-	padding-bottom: 40px;
-	padding-top: 30px;
-}
+	button{
+			padding-bottom: 40px;
+			padding-top: 30px;
+	}
 
 
-.submit {
-	background-color:#ed4343;
-	width: 100%;
-	height: 4rem;
-	font-size: 18px;
-	font-family: 'Raleway',sans-serif;
-	text-align: center;
-	border-color: black;
-}
-}
+	.submit {
+			background-color:#ed4343;
+			width: 100%;
+			height: 4rem;
+			font-size: 18px;
+			font-family: $raleway;
+			text-align: center;
+			border-color: black;
+	}
+	}
 }
 
 // validation - Form and Report pages
 
 .show-validation{
-	transition: 0.5s linear all;
+		transition: 0.5s linear all;
 }
 .show-validation{
 	input, select, textarea {
@@ -245,7 +244,7 @@ button{
 		color:black;
 		font-size: 30px;
 		font-weight: bold;
-		font-family: 'Raleway',sans-serif;
+		font-family: $raleway;
 		padding: 2rem 1rem;
 		box-sizing: border-box;
 		padding-top: 15px;
@@ -257,7 +256,7 @@ button{
 		color: black;
 		font-size: 20px;
 		font-weight: bold;
-		font-family: 'Raleway',sans-serif;
+		font-family: $raleway;
 		box-sizing: border-box;
 		padding:5px, 5px;
 		text-align: center;
@@ -265,21 +264,21 @@ button{
 
 
 	.actions{
-		flex:1;
-		padding-left: 20px;
-		overflow: scroll;
+			flex:1;
+			padding-left: 20px;
+			overflow: scroll;
 	}
 
 	#alienaction{
-	padding-bottom: 30px;
+			padding-bottom: 30px;
 	} 
 
 	.button{
-		display:block;
-		text-align: center;
-		padding-top: 30px;
-		padding-bottom: 40px;
-		background-color: black;
+			display:block;
+			text-align: center;
+			padding-top: 30px;
+			padding-bottom: 40px;
+			background-color: black;
 
 		input{
 			background-color:#ed4343;
@@ -287,7 +286,7 @@ button{
 			width: 88%;
 			height: 3rem;
 			font-size: 18px;
-			font-family: 'Raleway',sans-serif;
+			font-family: $raleway;
 			text-align: center;
 		}
 
@@ -297,21 +296,21 @@ button{
 // REPORT SCREEN - html4 
 
 .report{
-	display:flex;
-	flex-direction: column;
-	background-color: black;
-	height: 100vh;
+		display:flex;
+		flex-direction: column;
+		background-color: black;
+		height: 100vh;
 
 	header h1{
-		flex:1;
-		font-size: 30px;
-		color: white;
-		font-weight: bold;
-		font-family: 'Raleway',sans-serif;
-		padding-bottom: 0.5rem;
-		padding-top: 1rem;
-		text-transform: none;
-		text-align: center;
+			flex:1;
+			font-size: 30px;
+			color: white;
+			font-weight: bold;
+			font-family: $raleway;
+			padding-bottom: 0.5rem;
+			padding-top: 1rem;
+			text-transform: none;
+			text-align: center;
 	}
 
 	header h3{
@@ -319,75 +318,199 @@ button{
 			text-align: center;
 		}
 
-fieldset{
-	flex:1;
-	padding-top:20px;
-}
+	fieldset{
+		flex:1;
+		padding-top:20px;
+	}
 
-form{
-	display: flex;
-	flex-direction: column;
-	width: 90%;
-	flex:4;
-	padding: 0 2rem;
+	form{
+		display: flex;
+		flex-direction: column;
+		width: 90%;
+		flex:4;
+		padding: 0 2rem;
 
-}
-
-
-	.custom-select {
-		display: block;
-		height:2rem;
-		background:white;
-		line-height: 1rem;
-		width: 100%;
+	}
 
 
-		select {
-			font-size:1rem;
-			line-height:2rem;
-			padding-left:0.5rem;
-			font-family: 'Raleway',sans-serif;
-			color: red;
-		}
-
-}
+		.custom-select {
+					display: block;
+					height:2rem;
+					background:white;
+					line-height: 1rem;
+					width: 100%;
 
 
-textarea {
-width: 100%;
-height: 9rem;
-font-size: 1rem;
-line-height: 1rem;
-padding: 0.5rem;
-margin-top:1rem;
-padding-left: 0px;
-padding-right: 0px;
-}
+			select {
+					font-size:1rem;
+					line-height:2rem;
+					padding-left:0.5rem;
+					font-family: $raleway;
+					color: red;
+			}
 
-*::-webkit-input-placeholder{
-	color: #ed4343;
-	font-size: 1rem;
-	font-family:'Raleway',sans-serif;
-}
-
-button{
-	
-	padding-bottom: 40px;
-	padding-top: 30px;
-}
+	}
 
 
-.submit {
-	background-color:#ed4343;
-	width: 100%;
-	height: 4rem;
-	font-size: 18px;
-	font-family: 'Raleway',sans-serif;
-	text-align: center;
-	border-color: black;
-}
+	textarea {
+			width: 100%;
+			height: 9rem;
+			font-size: 1rem;
+			line-height: 1rem;
+			padding: 0.5rem;
+			margin-top:1rem;
+			padding-left: 0px;
+			padding-right: 0px;
+	}
 
+	*::-webkit-input-placeholder{
+								color: #ed4343;
+								font-size: 1rem;
+								font-family:$raleway;
+	}
+
+	button{
+			padding-bottom: 40px;
+			padding-top: 30px;
+	}
+
+
+	.submit {
+			background-color:#ed4343;
+			width: 100%;
+			height: 4rem;
+			font-size: 18px;
+			font-family: $raleway;
+			text-align: center;
+			border-color: black;
+	}
 
 }
+// Animation code
 
+ .page {
+	 position: absolute;
+	 width: 100%;
+	 top: 0;
+	 bottom: 0;
+}
+
+[ui-view].ng-enter, [ui-view].ng-leave {
+  position: absolute;
+  left: 0;
+  right: 0;
+  -webkit-transition:all .5s ease-in-out;
+    -moz-transition:all .5s ease-in-out;
+    -o-transition:all .5s ease-in-out;
+    transition:all .5s ease-in-out;
+}
+
+[ui-view].ng-enter {
+  
+  .welcome & {
+    opacity: 0; 
+  }
+
+  .register & {
+    opacity: 0;
+    -webkit-transform:translate3d(0, -2000px, 0);
+    -moz-transform:translate3d(0, -2000px, 0);
+    transform:translate3d(0, -2000px, 0);
+  }
+
+  .encounters & {
+    -webkit-transform:translate3d(200px, 0, 0);
+    -moz-transform:translate3d(200px, 0, 0);
+    transform:translate3d(200px, 0, 0);
+  }
+
+  .report & {
+    opacity:0;
+    -webkit-transform:translate3d(-200px, 0, 0);
+    -moz-transform:translate3d(-200px, 0, 0);
+    transform:translate3d(-200px, 0, 0);
+  }
+}
+
+[ui-view].ng-enter-active {
+  .welcome & {
+    opacity: 1; 
+  }
+  
+  .register & {
+    opacity: 1;
+    -webkit-transform:translate3d(0, 0, 0);
+    -moz-transform:translate3d(0, 0, 0);
+    transform:translate3d(0, 0, 0);
+  }
+
+  .encounters & {
+    -opacity: 1;
+    -webkit-transform:translate3d(0, 0, 0);
+    -moz-transform:translate3d(0, 0, 0);
+    transform:translate3d(0, 0, 0);
+  }
+
+  .report & {
+    opacity: 1;
+    -webkit-transform:translate3d(0, 0, 0);
+    -moz-transform:translate3d(0, 0, 0);
+    transform:translate3d(0, 0, 0);
+  }
+}
+
+[ui-view].ng-leave {
+  .welcome & {
+    opacity: 1; 
+  }
+  
+  .register & {
+    opacity: 1; 
+    -webkit-transform:scale3d(1,1,1);
+    -moz-transform:scale3d(1,1,1);
+    transform:scale3d(1,1,1);
+  }
+
+  .encounters & {
+    opacity:1;
+    -webkit-transform:translate3d(0, 0, 0);
+    -moz-transform:translate3d(0, 0, 0);
+    transform:translate3d(0, 0, 0);
+  }
+
+  .report & {
+    opacity:1;
+    -webkit-transform:translate3d(0, 0, 0);
+    -moz-transform:translate3d(0, 0, 0);
+    transform:translate3d(0, 0, 0);
+  }
+ 
+}
+
+[ui-view].ng-leave-active {
+  .welcome & {
+    opacity: 0;
+  }
+
+  .register & {
+    opacity: 0;
+    -webkit-transform:scale3d(0,0,0);
+    -moz-transform:scale3d(0,0,0);
+    transform:scale3d(0,0,0);
+  }
+
+  .encounters & {
+    opacity:0;
+    -webkit-transform:translate3d(-200px, 0, 0);
+    -moz-transform:translate3d(-200px, 0, 0);
+    transform:translate3d(-200px, 0, 0);
+  }
+
+  .report & {
+    opacity:0;
+    -webkit-transform:translate3d(200px, 0, 0);
+    -moz-transform:translate3d(200px, 0, 0);
+    transform:translate3d(200px, 0, 0);
+  }
+}
 

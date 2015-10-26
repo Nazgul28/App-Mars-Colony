@@ -1,5 +1,14 @@
 var app = angular.module("myApp", ['ui.router', 'ngAnimate', 'ngCookies']);
 
+//Animation
+app.run(function($rootScope){
+		$rootScope.$on('$stateChangeStart', function(event, toState, toParams, fromState, fromParams) {
+		$rootScope.stateName = toState.name;
+	})
+		})
+
+//Config
+
 	app.config(['$stateProvider',
 				'$urlRouterProvider',
 				'$locationProvider',
@@ -50,10 +59,6 @@ var app = angular.module("myApp", ['ui.router', 'ngAnimate', 'ngCookies']);
 						 })
 
 	}]);
-
-// .run(function($rootScope){
-
-//  })
 
 // My Controlers
 // home page controller - welcome screen
@@ -161,10 +166,14 @@ var ALIEN_TYPE_API_URL = "https://red-wdp-api.herokuapp.com/api/mars/aliens";
 		
 		if ($scope.myReport.$invalid){
 			$scope.showValidation=true;
+		}else{
+
+			alert ("Thank you for your report! Mars is even safer now!");
 		
 		}
 	}
 
+	
 
 }]);
 
