@@ -208,8 +208,8 @@ html {
         -ms-flex: 1;
             flex: 1;
     line-height: 18vh;
-    padding-left: 40px;
-    padding-right: 40px; }
+    padding-left: 8rem;
+    padding-right: 8rem; }
     .form form input {
       width: 99%;
       height: 4rem;
@@ -364,11 +364,12 @@ html {
     -webkit-flex-direction: column;
         -ms-flex-direction: column;
             flex-direction: column;
-    width: 90%;
+    width: 80%;
     -webkit-flex: 4;
         -ms-flex: 4;
             flex: 4;
-    padding: 0 2rem; }
+    padding: 0 2rem;
+    padding-left: 7rem; }
   .report .custom-select {
     display: block;
     height: 2rem;

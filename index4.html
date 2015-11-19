@@ -7,11 +7,10 @@
 				<h1> Report Encounter </h1>
 				<h3> Saftey on Mars is your responsability </h3>
 			</header>
-
 			<form name="myReport"  class="loginReport" ng-submit="enter($event)" ng-class="{'show-validation': showValidation}" novalidate>
 				<fieldset>
 					<div class="custom-select">
-						<select name="alien" ng-model="alien.type" ng-class="{placeholder: !alien.type}"required>
+						<select name="alien" ng-model="report.atype" ng-class="{placeholder: !alien.type}"required>
 								<option value="" class="placeholder">Select alien type</option>
 								<option value="{{alien.type}}" ng-repeat="alien in aliens "> {{alien.type}} </option>
 			      		</select>
@@ -19,7 +18,7 @@
 		      		<textarea ng-model="report.action" type="text" name="action" placeholder="Action taken" required></textarea>
 	      		</fieldset>
 		      	<fieldset id="report-button">
-        			<button class="submit" style="color:white">Submit Report</button>
+        			<button class="submit" ng-click="submitReport($event,myReport)" style="color:white">Submit Report</button>
         		</fieldset>
 	      	</form>
 		</div>
