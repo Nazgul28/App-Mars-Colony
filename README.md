@@ -17,7 +17,7 @@ I implemented and managed AngularJS modules:
 Service,
 Factory,
 Controller,
-Directive,
+Directive.
 
 Other achieved goals:  
 
