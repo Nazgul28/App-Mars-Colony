@@ -33,4 +33,4 @@ ng-show,
 ng-hide,
 ng-if.
 
-
+I could play with CSS3 transform - see "pulse" (first screen).
