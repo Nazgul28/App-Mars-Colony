@@ -1,8 +1,7 @@
 # App "Mars Colony" project - AngularJS
 
-Project 4 - RED Academy.
 
-In this project I could practice my skills in AngularJS!
+In this project I could practice my skills in AngularJS! It was my 4th project at RED Academy.
 
 I also implemented basic ajax GET and POST requests using Angular’s $http service in order to:
 Save a new colonists information,
